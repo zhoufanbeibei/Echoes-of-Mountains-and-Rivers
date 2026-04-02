@@ -1,2 +1,2 @@
-# Echoes-of-Mountains-and-Rivers
-Sichuan university 2026 DaChuang project
+# Echoes-of-Mountains-and-Rivers山川的回响
+Sichuan university  四川大学2026大创项目
