@@ -1,0 +1,31 @@
+# Unity 核心忽略规则
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# Unity 自动生成的VS文件
+*.csproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.unityproj
+*.svd
+
+# Visual Studio 配置
+/.vs/
+/.vscode/
+
+# 你的RealWorldTerrain插件缓存
+/RWT_Cache/
+/RealWorldTerrainPrefs.xml
+
+# Mac/Windows系统文件
+.DS_Store
+Thumbs.db
