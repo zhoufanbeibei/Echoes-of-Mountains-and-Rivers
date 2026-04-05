@@ -1,11 +1,13 @@
-# Unity 核心忽略规则
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Uu]ser[Ss]ettings/
+# 忽略 Unity 缓存文件
+[Uu]nityProject/[Ll]ibrary/
+[Uu]nityProject/[Tt]emp/
+[Uu]nityProject/[Oo]bj/
+[Uu]nityProject/[Bb]uild/
+[Uu]nityProject/[Bb]uilds/
+[Uu]nityProject/[Mm]onoDevelop.props
+unity-project/Library/
+unity-project/Temp/
+unity-project/Obj/
 
 # Unity 自动生成的VS文件
 *.csproj
@@ -29,3 +31,6 @@
 # Mac/Windows系统文件
 .DS_Store
 Thumbs.db
+
+# 忽略网页缓存
+node_modules/
