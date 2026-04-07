@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="山川的回响：用更亲和的互动故事做地质灾害科普。进入游戏 Demo，或查看 Unity 项目介绍。"
+    />
+    <title>山川的回响｜灾害科普互动平台</title>
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+
+  <body>
+    <header class="topbar" id="top" role="banner">
+      <div class="wrap topbar-inner">
+        <a class="brand" href="#top" aria-label="返回顶部">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <div class="brand-text">
+            <div class="brand-title">山川的回响</div>
+            <div class="brand-sub">科普互动平台</div>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="页面导航">
+          <a class="navlink" href="#about">平台介绍</a>
+          <a class="navlink" href="#highlights">亮点</a>
+          <a class="navlink" href="#cards">玩法卡片</a>
+        </nav>
+
+        <div class="top-actions">
+          <button
+            class="icon-btn"
+            type="button"
+            aria-label="跳到页面底部"
+            data-scrollto="#footer"
+            title="页面信息"
+          >
+            i
+          </button>
+          <a class="btn btn-primary" href="game.html">进入游戏 Demo</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="hero" aria-label="主页介绍">
+        <div class="hero-grid">
+          <div class="hero-left">
+            <div class="pillrow">
+              <span class="pill">用故事 · 学会避险</span>
+              <span class="pill">轻量科普</span>
+              <span class="pill">可爱亲和</span>
+            </div>
+
+            <h1 class="hero-title">
+              把地质灾害科普做成
+              <span class="hero-title-accent">可体验的互动故事</span>
+            </h1>
+
+            <p class="hero-lead">
+              我们想把“该怎么做”讲得更清楚也更好记：灾害是什么、危险从哪来、遇到情况如何自保。
+              你可以先玩网页版 Demo，在关键节点做选择、回答小问题，边玩边学。
+            </p>
+
+            <div class="cta-row" aria-label="快速入口">
+              <a class="btn btn-primary btn-lg" href="game.html">开始体验游戏 Demo</a>
+              <a class="btn btn-ghost btn-lg" href="unity.html">查看 Unity 项目介绍</a>
+            </div>
+
+            <div class="mini-cards" id="cards" aria-label="玩法卡片">
+              <div class="mini">
+                <div class="mini-k">视觉小说 + 互动叙事</div>
+                <div class="mini-v">跟着剧情做选择</div>
+              </div>
+              <div class="mini">
+                <div class="mini-k">科普提示</div>
+                <div class="mini-v">在关键时刻问一问</div>
+              </div>
+              <div class="mini">
+                <div class="mini-k">轻量打开</div>
+                <div class="mini-v">双击即可体验</div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="demo-card" aria-label="体验入口">
+            <div class="demo-top">
+              <span class="tag">Demo 已就绪</span>
+              <span class="path">web-demo/</span>
+            </div>
+            <h2 class="demo-title">体验入口</h2>
+            <p class="demo-desc">
+              当前提供网页版 Demo：包含剧情推进、选择分支、答题提示与状态栏展示。
+            </p>
+            <a class="btn btn-primary btn-block" href="game.html">打开「game.html」</a>
+            <a class="btn btn-soft btn-block" href="unity.html">查看 Unity 介绍页（占位）</a>
+            <div class="hint">提示：Unity 介绍页还未编写，先保留跳转入口即可。</div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="about" aria-label="平台介绍">
+        <div class="section-head">
+          <h2 class="section-title">平台介绍</h2>
+          <p class="section-sub">
+            目标是把“看得懂的知识”，变成“一次次记得住的体验”。
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>面向人群</h3>
+            <p>公众科普、学生课堂、日常避险的入门学习。</p>
+          </div>
+          <div class="card">
+            <h3>学习路径</h3>
+            <p>剧情引入 → 关键节点问一问 → 选择与反馈 → 总结回顾。</p>
+          </div>
+          <div class="card">
+            <h3>离线友好</h3>
+            <p>不依赖复杂服务，直接打开即可体验与分享。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="highlights" aria-label="主页亮点">
+        <div class="section-head">
+          <h2 class="section-title">主页亮点（Home）</h2>
+          <p class="section-sub">主页负责导航、入口、与“为什么要玩”的解释。</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>清晰的入口与导览</h3>
+            <p>一眼看到 Demo 入口，也能快速跳到介绍与玩法卡片。</p>
+            <div class="chipline" aria-label="引导项">
+              <span class="chip">导航</span>
+              <span class="chip">入口</span>
+              <span class="chip">玩法简介</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>自然与亲和的氛围</h3>
+            <p>用明亮、柔和的自然色做背景，让科普像一次轻松的小旅行。</p>
+            <div class="chipline" aria-label="风格项">
+              <span class="chip">浅色</span>
+              <span class="chip">圆角</span>
+              <span class="chip">少术语</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="footer">
+      <div class="wrap footline">
+        <div>© <span id="year"></span> 山川的回响 · 科普互动平台</div>
+        <div class="footlinks">
+          <a class="navlink" href="game.html">打开 Demo</a>
+          <a class="navlink" href="unity.html">Unity 介绍页（占位）</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/home.js"></script>
+  </body>
+</html>
