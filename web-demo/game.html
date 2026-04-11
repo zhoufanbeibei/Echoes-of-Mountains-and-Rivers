@@ -10,9 +10,11 @@
 
 <!-- 视觉小说 全屏容器 -->
 <div class="vn-container">
-  <!-- 背景层 -->
-  <div class="vn-bg"></div>
-
+ 
+<div class="vn-bg">
+  <!-- 新增：背景图片渐变层 -->
+  <div class="vn-bg-img" id="bgImage"></div>
+</div>
   <!-- 顶部悬浮状态栏 -->
   <div class="vn-status">
     <span>时间：<b id="time">6:30</b></span>
@@ -25,10 +27,12 @@
   <div class="vn-control">
     <button id="autoBtn" onclick="toggleAuto(); event.stopPropagation()">手动模式</button>
     <select id="speedSelect" onchange="changeSpeed(); event.stopPropagation()">
-      <option value="1">慢速</option>
-      <option value="2" selected>中速</option>
+      <option value="1" selected>慢速</option>
+      <option value="2" >中速</option>
       <option value="3">快速</option>
     </select>
+    <!-- 新增：音乐开关 -->
+  <button id="bgmBtn">开启音乐</button>
     <!-- 新增重新游玩按钮 -->
     <button onclick="resetGame(); event.stopPropagation()">重新游玩</button>
   </div>
@@ -64,6 +68,8 @@
   </div>
 </div>
 
+<!-- 新增：背景音乐音频标签（关键修复） -->
+<audio id="bgm" loop></audio>
 <script src="js/game.js"></script>
 </body>
 </html>
