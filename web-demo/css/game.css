@@ -78,30 +78,6 @@ html, body {
   background: #5a4e42;
 }
 
-/* 角色立绘 - 左侧居下（VN标准） */
-.vn-char {
-  position: absolute;
-  left: 80px;
-  bottom: 180px;
-  width: 180px;
-  height: 450px;
-  display: flex;
-  align-items: end;
-  justify-content: center;
-  z-index: 5;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-.vn-char.show {
-  opacity: 1;
-}
-.vn-char img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  border-radius: 8px;
-  filter: sepia(20%);
-}
 
 /* 底部对话框 - 视觉小说核心 */
 .vn-dialog {
@@ -221,18 +197,18 @@ html, body {
   background: #6b5b4d;
 }
 
-/* 开场面板 */
 .vn-start {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(26, 22, 18, 0.95);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 30;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 22, 18, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999 !important; /* 强制最高层 */
+    pointer-events: auto !important; /* 强制可点击 */
 }
 .diary-box {
   background: #4a4036;
@@ -262,4 +238,61 @@ html, body {
 }
 .diary-box button:hover {
   background: #6b5b4d;
+}
+/* 背景层 - 复古山川肌理（原有样式保留，新增z-index） */
+.vn-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #2d2620;
+  background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10l100 100M110 10L10 110' stroke='%233a312a' stroke-width='1' fill='none'/%3E%3C/svg%3E");
+  opacity: 0.8;
+  z-index: 0; /* 肌理层在背景图上层，形成叠加效果 */
+}
+
+/* 新增：背景图片渐变层 */
+.vn-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;    /* 背景图自适应全屏 */
+  background-position: center;/* 居中显示 */
+  background-repeat: no-repeat;
+  opacity: 0;                /* 默认隐藏 */
+  transition: opacity 1s ease-in-out; /* 1秒渐变过渡 */
+  z-index: -1;               /* 放在肌理层下方，叠加复古纹理 */
+  filter: sepia(15%);        /* 匹配角色立绘的复古滤镜 */
+}
+/* 角色立绘 - 左侧居下（放大版，适配现代VN尺寸） */
+.vn-char {
+  position: absolute;
+  left: 50px;          /* 向左微调，留出更多对话空间 */
+  bottom: 100px;       /* 向下微调，让立绘更贴底 */
+  width: 280px;        /* 从180px放大到280px（核心放大） */
+  height: 550px;       /* 从450px放大到550px（核心放大） */
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 0.5s ease; /* 保留原有过渡效果 */
+}
+.vn-char.show {
+  opacity: 1;
+}
+.vn-char img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  filter: sepia(20%);
+  /* 新增：可选优化，让立绘边缘更自然 */
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+/* 可选：鼠标悬停立绘轻微放大，增加交互感 */
+.vn-char:hover img {
+  transform: scale(1.05);
 }
